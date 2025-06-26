@@ -12,7 +12,7 @@ It supports full **CRUD operations** (Create, Read, Update, Delete) via REST API
 
 ## 🚀 Quick Start (No Need to Install Java or Docker Locally)
 
-**Recommended method:** Use [Docker Playground](https://www.docker.com/playground)  
+**Recommended method:** Use [Docker Playground](https://labs.play-with-docker.com/)  
 You don’t need to install Java, Spring Boot, or Docker on your computer.
 
 ### Steps:
