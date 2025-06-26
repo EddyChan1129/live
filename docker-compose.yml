@@ -1,3 +1,4 @@
+version: '3.8'
 services:
   java_db:
     container_name: java_db
@@ -10,6 +11,19 @@ services:
       POSTGRES_DB: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
+
+  live_app:
+    container_name: live_app
+    build: .
+    image: live-app:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - java_db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://java_db:5432/postgres
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
 
 volumes:
   pgdata: {}
